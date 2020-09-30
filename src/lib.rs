@@ -43,7 +43,7 @@ impl ThreadPool {
 
 struct Worker {
     id: usize,
-    thread: thread::JoinHandle<Arc<Mutex<mpsc::Receiver<Job>>>>,
+    thread: thread::JoinHandle<()>,
 }
 
 impl Worker {
